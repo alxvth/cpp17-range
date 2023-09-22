@@ -1,10 +1,10 @@
 cmake_minimum_required (VERSION 3.21)
 
-set(RANGE_PCA "RANGE_TEST")
-project(${RANGE_PCA} CXX)
+set(RANGE_TEST "RANGE_TEST")
+project(${RANGE_TEST} CXX)
 
-add_executable(${RANGE_PCA} "main.cpp")
+add_executable(${RANGE_TEST} "main.cpp")
 
-target_compile_features(${RANGE_PCA} PUBLIC cxx_std_17)
+target_compile_features(${RANGE_TEST} PUBLIC cxx_std_17)
 
-target_include_directories(${RANGE_PCA} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/../range")
+target_include_directories(${RANGE_TEST} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/../range")
