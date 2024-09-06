@@ -26,10 +26,9 @@ std::ranges::for_each(std::views::iota(0, 10), [](const auto i){
 ```
 
 ## Performance
-Both these snippets compile to the same code, check it out [with compiler explorer](https://godbolt.org/z/nMY79eEhb):
+Both these snippets compile to the same code, check it out on compiler explorer with [gcc](https://godbolt.org/z/fTMfoncx5), [clang](https://godbolt.org/z/nGj3bxbef), [msvc](https://godbolt.org/z/s6sxxGcad):
 ```cpp
-auto range = utils::range(10);
-for(const auto& num : range)
+for(const auto& num : utils::range(10))
     std::cout << num << " ";
 
 for (int i = 0; i < 10; ++i)
